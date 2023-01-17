@@ -16,7 +16,15 @@ public class Main
 
     }
 
-
+    public void createCharacter(int s,int a, int m, int i, int h)
+    {
+        int intelligence = i;
+        int strength = s;
+        int magic = m;
+        int agility = a;
+        int hp = h;
+        Weapon baseWeapon = new Weapon("Base",dagger);
+    }
 
     public static void main(String[] args)
     {
