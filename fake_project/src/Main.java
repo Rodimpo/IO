@@ -16,7 +16,14 @@ public class Main
 
     }
 
-
+    public void saveComponent() throws IOException
+    {
+        FileOutputStream fileOut = new FileOutputStream("../savedChar.ser");
+        ObjectOutputStream out = new ObjectOutputStream(fileOut);
+        out.writeObject(character);
+        out.close();
+        fileOut.close();
+    }
 
     public static void main(String[] args)
     {
