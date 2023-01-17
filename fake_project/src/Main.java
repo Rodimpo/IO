@@ -25,6 +25,24 @@ public class Main
         fileOut.close();
     }
 
+    public void loadComponent() throws IOException, ClassNotFoundException
+    {
+        FileInputStream fileIn = new FileInputStream("../savedCalk.ser");
+        ObjectInputStream in = new ObjectInputStream(fileIn);
+        createCharacter();= (Character) in.readObject();
+        in.close();
+        fileIn.close();
+    }
+    public void createCharacter(int s,int a, int m, int i, int h)
+    {
+        int intelligence = i;
+        int strength = s;
+        int magic = m;
+        int agility = a;
+        int hp = h;
+        Weapon baseWeapon = new Weapon("Base",dagger);
+    }
+
     public static void main(String[] args)
     {
         Main ebe = new Main();
