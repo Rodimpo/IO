@@ -16,7 +16,14 @@ public class Main
 
     }
 
-
+    public void loadComponent() throws IOException, ClassNotFoundException
+    {
+        FileInputStream fileIn = new FileInputStream("../savedCalk.ser");
+        ObjectInputStream in = new ObjectInputStream(fileIn);
+        createCharacter();= (Character) in.readObject();
+        in.close();
+        fileIn.close();
+    }
 
     public static void main(String[] args)
     {
